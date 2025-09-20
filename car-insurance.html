@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body style="background-image: radial-gradient(circle,rgba(214, 172, 126, 1) 0%, rgba(209, 175, 136, 1) 51%, rgba(191, 144, 94, 1) 100%)">
+    <header class="header">
+        <a href="home.html">Chaya's Insurance</a>
+        <div class="home-menu">
+            <a href="history.html"><h2 id="h2UserName"></h2></a>
+            <button type="click" id="btnLog"></button>
+        </div>
+    </header>
+
+    <div class="car-info-container">
+        <div class="car-info-dump">
+            <h2>Isi form dan cek premi asuransi mobilmu!</h2>
+            <a href="terms.html">Syarat dan Ketentuan</a>
+            <form action="" id="car-form">
+                <label for="car-brand">Merk Mobil</label><br>
+                <input type="text" id="car-brand" placeholder="contoh: Toyota" required><br>
+
+                <label for="car-model">Jenis Mobil</label><br>
+                <input type="text" id="car-model" placeholder="contoh: Kijang Innova Zenix" required><br>
+                
+                <label for="car-year">Tahun Pembuatan</label><br>
+                <input type="number" id="car-year" placeholder="contoh: 2020" required><br>
+
+                <label for="car-price">Harga Mobil</label><br>
+                <input type="number" id="car-price" placeholder="*dalam ribuan rupiah (contoh: 10000)" required><br>
+
+                <label for="car-plate">Nomor Plat Mobil</label><br>
+                <input type="text" id="car-plate" placeholder="contoh: B1111ABC" required><br>
+
+                <label for="car-machine">Nomor Mesin</label><br>
+                <input type="text" id="car-machine" placeholder="contoh: 2NRFEA12345" required><br>
+
+                <label for="car-id">Nomor Rangka</label><br>
+                <input type="text" id="car-id" placeholder="contoh: MHFM1BA3JRJ123456" required><br>
+
+                <label for="car-owner">Nama Pemilik</label><br>
+                <input type="text" id="car-owner" placeholder="contoh: Andi Budiman" required></label><br><br>
+
+                <label>Foto Tampak Depan</label><br>
+                <input type="file" accept="image/*" id="car-img-front" required><br>
+
+                <label>Foto Tampak Belakang</label><br>
+                <input type="file" accept="image/*" id="car-img-back" required>
+
+                <label>Foto Tampak Kiri</label><br>
+                <input type="file" accept="image/*" id="car-img-left" required>
+
+                <label>Foto Tampak Kanan</label><br>
+                <input type="file" accept="image/*" id="car-img-right" required>
+
+                <label>Foto Dashboard</label><br>
+                <input type="file" accept="image/*" id="car-img-dashboard" required>
+
+                <label>Foto Mesin</label><br>
+                <input type="file" accept="image/*" id="car-img-machine" ><br>
+                <button type="submit" class="insurance-checkout" id="car-checkout">Cek Premi</button>
+            </form>
+        </div>
+        <div class="car-info-right"></div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

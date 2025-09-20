@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body style="background-image: radial-gradient(circle,rgba(214, 172, 126, 1) 0%, rgba(209, 175, 136, 1) 51%, rgba(191, 144, 94, 1) 100%)">
+    <header class="header">
+        <a href="home.html">Chaya's Insurance</a>
+        <div class="home-menu">
+            <a href="history.html"><h2 id="h2UserName"></h2></a>
+            <button type="click" id="btnLog"></button>
+        </div>
+    </header>
+
+    <div class="hp-info-container">
+        <div class="hp-info-dump">
+            <h2>Isi form dan cek premi asuransi jiwamu!</h2>
+            <a href="terms.html">Syarat dan Ketentuan</a>
+            <form action="" id="hp-form">
+                <label for="hp-name">Nama Lengkap Sesuai KTP</label><br>
+                <input type="text" id="hp-name" placeholder="contoh: Andi Budiman" required><br>
+
+                <label for="hp-dob">Tanggal Lahir</label><br>
+                <input type="date" id="hp-dob" required><br>
+                
+                <label for="hp-job">Pekerjaan</label><br>
+                <input type="text" id="hp-job" placeholder="contoh: Dokter" required><br>
+
+                <label for="hp-smoke">Merokok?</label><br>
+                <input type="number" id="hp-smoke" placeholder="1 Untuk YA / 0 Untuk TIDAK" required><br>
+
+                <label for="hp-hyper">Memiliki Riwayat Hipertensi?</label><br>
+                <input type="number" id="hp-hyper" placeholder="1 Untuk YA / 0 Untuk TIDAK" required><br>
+
+                <label for="hp-diabetes">Memiliki Diabetes?</label><br>
+                <input type="number" id="hp-diabetes" placeholder="1 Untuk YA / 0 Untuk TIDAK" required><br>
+
+                <button type="submit" class="insurance-checkout" id="health-checkout">Cek Premi</button>
+            </form>
+        </div>
+        <div class="hp-info-right"></div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

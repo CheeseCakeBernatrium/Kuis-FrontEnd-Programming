@@ -1,0 +1,800 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-bg: #d5ae84;
+    --bg2: #be9672;
+    --bg3: #dec79b;
+    --bg4: #e8dea8;
+    --bg5: #ebe3b7;
+    --ls-title: #6b4226;
+    --dark-text: #4f2a12;
+    --link-color: #e16767;
+    --link-shadow: #d85950;
+    --lst-shadow: rgb(190, 147, 104);
+    --container1: #e4d097;
+    --box-shadow1: #cfb56e;
+    --box-shadow2: #a67c52;
+}
+
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Login and Signup Stuff*/
+.ls-container{
+    background-color: var(--container1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.ls-title{
+    color: var(--ls-title);
+    margin-bottom: 20px;
+}
+
+#signup-form input{
+    outline: none;
+    padding: 9px;
+    width: 85%;
+    margin: 7px auto;
+    border: none;
+    border-radius: 4px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1);
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+}
+
+#signup-form button{
+    background-color: var(--ls-title);
+    padding: 9px;
+    margin-top: 10px;
+    width: 75%;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 2px 2px 0px var(--lst-shadow);
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#signup-form button:hover{
+    transform: scale(1.05);
+}
+
+.ls-container p{
+    margin-top: 10px;
+    color: var(--ls-title);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.ls-container a{
+    color: var(--ls-title);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.ls-container a:hover{
+    color: var(--link-color);
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+#login-form input{
+    outline: none;
+    padding: 9px;
+    width: 85%;
+    margin: 7px auto;
+    border: none;
+    border-radius: 4px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1);
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+}
+
+#login-form button{
+    background-color: var(--ls-title);
+    padding: 9px;
+    margin-top: 10px;
+    width: 75%;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 2px 2px 0px var(--lst-shadow);
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#signup-form button:hover{
+    transform: scale(1.05);
+}
+
+/* Header */ 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container1);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 0px var(--box-shadow1), 0px 8px 0px var(--box-shadow2);
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.header a{
+    color: var(--ls-title);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.header a:hover{
+    transform: scale(1.01);
+}
+
+.home-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-menu h2{
+    color: var(--ls-title);
+    font-size: 2rem;
+}
+
+.home-menu button{
+    margin-left: 20px;
+    font-size: 2rem;
+    border: none;
+    background-color: var(--link-color);
+    color: white;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px var(--link-shadow);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.home-menu button:hover{
+    transform: scale(1.05);
+}
+
+/* Home Section */
+#home-section{
+    height: 500px;
+    scroll-margin-top: 180px;
+}
+
+.home-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 180px;
+}
+
+.home-wrapper h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 35px;
+    text-shadow: 0px 2px 0px var(--box-shadow2);
+}
+
+.insurance-selector{
+    width: 60%;
+    height: 50%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insurance-container{
+    background-color: var(--container1);
+    width: 20%;
+    height: 60%;
+    border-radius: 20px;
+    padding: 4% 5% 4% 5%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 0px var(--box-shadow1), 0px 8px 0px var(--box-shadow2);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.insurance-container:hover{
+    transform: scale(1.05);
+}
+
+.insurance-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.insurance-container a:hover{
+    transform: scale(1.05);
+}
+
+.insurance-container p{
+    color: var(--ls-title);
+    font-size: 20px;
+    text-shadow: 0px 2px 0px var(--box-shadow1);
+}
+
+.white-circle{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 0px var(--box-shadow1);
+}
+
+.white-circle img{
+    width: 90%;
+    height: 90%;
+}
+
+/* Insurance Sections*/
+#car-section, #health-section, #life-section{
+    height: 500px;
+    scroll-margin-top: 100px;
+}
+
+.main-section-container{
+    display: flex;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.section-container1-right{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    margin: 50px 80px;
+    border: 2px solid var(--ls-title);
+    box-shadow: 20px 20px 0px var(--box-shadow2);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.section-container1-right:hover{
+    transform: scale(1.05);
+}
+
+.section-container1-right img{
+    width: 100%;
+    height: 100%;
+}
+
+.right-column{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 60px;
+}
+
+.section-container2-right{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: white;
+    text-shadow: 2px 2px 0px var(--box-shadow2);
+}
+
+.section-container3-right{
+    margin-top: 20px;
+    width: 80%;
+    height: 26%;
+    padding: 5px auto;
+    border-radius: 20px;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--container1);
+    box-shadow: 10px 10px 0px var(--box-shadow2);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.section-container3-right:hover{
+    transform: scale(1.1);
+}
+
+.section-container3-right a{
+    color: var(--ls-title);
+    text-decoration: none;
+}
+
+.section-container1-left{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    margin-left: 80px;
+    margin-top: 50px;
+    border: 2px solid var(--ls-title);
+    box-shadow: 20px 20px 0px var(--box-shadow2);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.section-container1-left:hover{
+    transform: scale(1.05);
+}
+
+.section-container1-left img{
+    width: 100%;
+    height: 100%;
+}
+
+.left-column{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.section-container2-left{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: white;
+    text-shadow: 2px 2px 0px var(--box-shadow2);
+}
+
+.section-container3-left{
+    margin-top: 20px;
+    width: 80%;
+    height: 26%;
+    padding: 5px auto;
+    border-radius: 20px;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--container1);
+    box-shadow: 10px 10px 0px var(--box-shadow2);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.section-container3-left:hover{
+    transform: scale(1.1);
+}
+
+.section-container3-left a{
+    color: var(--ls-title);
+    text-decoration: none;
+}
+
+.footer{
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-text);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 0px var(--ls-title);
+    color: var(--container1);
+}
+
+/* Receipts */
+.receipt-info{
+    background-color: var(--container1);
+    width: 600px;
+    height: 50%;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    text-align: center;
+    color: var(--ls-title);
+}
+
+.receipt-info hr{
+    width: 80%;
+    height: 2px;
+    background-color: var(--ls-title);
+    border: none;
+    border-radius: 10px;
+}
+
+/* Car Insurance Page*/
+.car-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 150px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.car-info-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-info-dump{
+    background-color: var(--container1);
+    width: 600px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    text-align: center;
+    color: var(--ls-title);
+}
+
+.car-info-dump a{
+    color: var(--ls-title);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.car-info-dump a:hover{
+    transform: scale(1.05);
+}
+
+#car-form{
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#car-form input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1);
+    padding: 5px;
+    width: 93%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+input[type="file"]::-webkit-file-upload-button, input[type="file"]::file-selector-button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: var(--ls-title);
+    color: var(--bg5);
+    border-radius: 4px;
+    border: none;
+    transition: 0.3s ease;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.insurance-checkout{
+    margin-top: 10px;
+    left: 30%;
+    margin-bottom: 5px;
+    box-shadow: 4px 4px 0px var(--link-shadow);
+    padding: 5px;
+    font-size: 100%;
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--link-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.insurance-checkout:hover{
+    transform: scale(1.1);
+}
+
+.insurance-checkout a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Health Insurance */
+#hp-form{
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#hp-form input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1);
+    padding: 5px;
+    width: 93%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.hp-info-container{
+    top: 70%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hp-info-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.hp-info-dump{
+    background-color: var(--container1);
+    width: 600px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    text-align: center;
+    color: var(--ls-title);
+}
+
+.hp-info-dump a{
+    color: var(--ls-title);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hp-info-dump a:hover{
+    transform: scale(1.05);
+}
+
+/* Life Insurance */
+#life-form{
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#life-form input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1);
+    padding: 5px;
+    width: 93%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+#life-form select{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1);
+    padding: 5px;
+    width: 95%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.life-info-container{
+    top: 55%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.life-info-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.life-info-dump{
+    background-color: var(--container1);
+    width: 600px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    text-align: center;
+    color: var(--ls-title);
+}
+
+.life-info-dump a{
+    color: var(--ls-title);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.life-info-dump a:hover{
+    transform: scale(1.05);
+}
+
+/* Checkout*/
+.checkout-container{
+    background-color: var(--container1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--ls-title);
+}
+
+.checkout-title{
+    color: var(--ls-title);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.checkout-container hr{
+    height: 5px;
+    border: none;
+    background-color: var(--ls-title);
+    border-radius: 10px;
+    width: 80%;
+}
+
+.checkout-container p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.checkout-container select{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: var(--ls-title);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: -4px -4px 0px var(--box-shadow1), 0px -4px 0px var(--box-shadow1), -4px 0px 0px var(--box-shadow1);
+    padding: 5px;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+#payment-btn{
+    background-color: var(--link-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 18px;
+    width: 75%;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 0px var(--link-shadow), 0px 4px 0px var(--link-shadow), 4px 0px 0px var(--link-shadow);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#payment-btn:hover{
+    transform: scale(1.05);
+}
+
+/* History */
+.history-container {
+    margin-top: 150px; /* Pushes the container down from the header */
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--container1);
+    box-shadow: 4px 4px 0px var(--box-shadow1), 8px 8px 0px var(--box-shadow2);
+    width: 85%;
+    max-width: 1200px; /* Prevents the table from getting too wide on large screens */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.history-container h2 {
+    color: var(--ls-title);
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+#history-table {
+    width: 100%;
+    border-collapse: collapse; /* Makes borders clean and crisp */
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--dark-text);
+    box-shadow: 4px 4px 0px var(--box-shadow2);
+    border: 2px solid var(--link-color);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the border-radius is applied to the table corners */
+    table-layout: fixed;
+    background-color: var(--ls-title);
+}
+
+#history-table thead tr {
+    background-color: var(--ls-title);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+#history-table th, #history-table td {
+    padding: 15px; /* Adds comfortable spacing inside each cell */
+    text-align: left;
+}
+
+#history-table tbody tr {
+    border-bottom: 1px solid var(--box-shadow1);
+    background-color: #ffffff;
+}

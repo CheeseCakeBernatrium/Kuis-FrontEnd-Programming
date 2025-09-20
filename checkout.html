@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body style="background-image: radial-gradient(circle,rgba(214, 172, 126, 1) 0%, rgba(209, 175, 136, 1) 51%, rgba(191, 144, 94, 1) 100%)">
+    <div class="checkout-container">
+        <h2 class="checkout-title">Rincian Pembelian</h2>
+        <hr>
+        <p>Jenis Produk -- <span id="insurance-type"></span></p>
+        <p>Jumlah Premi -- Rp <span id="insurance-premi"></span></p>
+        <hr>
+        <br>
+        <select name="payment-opt" id="payment-opt">
+            <option value="Kartu Debit">Kartu Debit</option>
+            <option value="E-Wallet">E-Wallet</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+        </select><br>
+        <button type="click" id="payment-btn">Bayar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
