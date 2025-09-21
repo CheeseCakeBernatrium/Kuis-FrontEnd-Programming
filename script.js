@@ -194,16 +194,20 @@ if(carForm){
         let premiArray = localStorage.getItem('premiArray') ? localStorage.getItem('premiArray').split(',') : [];
         let paymentArray = localStorage.getItem('paymentArray') ? localStorage.getItem('paymentArray').split(',') : [];
         let statusArray = localStorage.getItem('statusArray') ? localStorage.getItem('statusArray').split(',') : [];
+        let dateArray = localStorage.getItem('dateArray') ? localStorage.getItem('dateArray').split(',') : [];
 
         typeArray.push("Asuransi Mobil");
         premiArray.push(premi);
         paymentArray.push("Menunggu Pembayaran");
         statusArray.push("Belum Lunas");
+        dateArray.push(new Date());
+
 
         localStorage.setItem('typeArray', typeArray.join(','));
         localStorage.setItem('premiArray', premiArray.join(','));
         localStorage.setItem('paymentArray', paymentArray.join(','));
         localStorage.setItem('statusArray', statusArray.join(','));
+        localStorage.setItem('dateArray', dateArray.join(','));
 
         //make receipt
         const localBrand = localStorage.getItem('carBrand');
@@ -322,16 +326,19 @@ if(hpForm){
         let premiArray = localStorage.getItem('premiArray') ? localStorage.getItem('premiArray').split(',') : [];
         let paymentArray = localStorage.getItem('paymentArray') ? localStorage.getItem('paymentArray').split(',') : [];
         let statusArray = localStorage.getItem('statusArray') ? localStorage.getItem('statusArray').split(',') : [];
+        let dateArray = localStorage.getItem('dateArray') ? localStorage.getItem('dateArray').split(',') : [];
 
-        typeArray.push("Asuransi Mobil");
+        typeArray.push("Asuransi Kesehatan");
         premiArray.push(finalPremi);
         paymentArray.push("Menunggu Pembayaran");
         statusArray.push("Belum Lunas");
+        dateArray.push(new Date());
 
         localStorage.setItem('typeArray', typeArray.join(','));
         localStorage.setItem('premiArray', premiArray.join(','));
         localStorage.setItem('paymentArray', paymentArray.join(','));
         localStorage.setItem('statusArray', statusArray.join(','));
+        localStorage.setItem('dateArray', dateArray.join(','));
 
         //make receipt
         const localName = localStorage.getItem('hpName');
@@ -419,16 +426,19 @@ if(lifeForm){
         let premiArray = localStorage.getItem('premiArray') ? localStorage.getItem('premiArray').split(',') : [];
         let paymentArray = localStorage.getItem('paymentArray') ? localStorage.getItem('paymentArray').split(',') : [];
         let statusArray = localStorage.getItem('statusArray') ? localStorage.getItem('statusArray').split(',') : [];
+        let dateArray = localStorage.getItem('dateArray') ? localStorage.getItem('dateArray').split(',') : [];
 
-        typeArray.push("Asuransi Mobil");
+        typeArray.push("Asuransi Jiwa");
         premiArray.push(finalPremi);
         paymentArray.push("Menunggu Pembayaran");
         statusArray.push("Belum Lunas");
+        dateArray.push(new Date());
 
         localStorage.setItem('typeArray', typeArray.join(','));
         localStorage.setItem('premiArray', premiArray.join(','));
         localStorage.setItem('paymentArray', paymentArray.join(','));
         localStorage.setItem('statusArray', statusArray.join(','));
+        localStorage.setItem('dateArray', dateArray.join(','));
 
         //make receipt
         const localName = localStorage.getItem('lifeName');
@@ -505,6 +515,7 @@ function renderTable() {
     const premiArray = localStorage.getItem('premiArray') ? localStorage.getItem('premiArray').split(',') : [];
     const paymentArray = localStorage.getItem('paymentArray') ? localStorage.getItem('paymentArray').split(',') : [];
     const statusArray = localStorage.getItem('statusArray') ? localStorage.getItem('statusArray').split(',') : [];
+    const dateArray = localStorage.getItem('dateArray') ? localStorage.getItem('dateArray').split(',') : [];
 
     if (typeArray.length === 0) {
         const noHistory = document.createElement('h3');
@@ -523,8 +534,12 @@ function renderTable() {
         headerRow.appendChild(typeHeader);
 
         const premiHeader = document.createElement('th');
-        premiHeader.textContent = 'Premi';
+        premiHeader.textContent = 'Jumlah yang Dibayar';
         headerRow.appendChild(premiHeader);
+        
+        const dateHeader = document.createElement('th');
+        dateHeader.textContent = 'Tanggal Transaksi';
+        headerRow.appendChild(dateHeader);
 
         const paymentHeader = document.createElement('th');
         paymentHeader.textContent = 'Pembayaran';
@@ -550,6 +565,10 @@ function renderTable() {
             const premiCell = document.createElement('td');
             premiCell.textContent = `Rp ${premiArray[i]}`;
             row.appendChild(premiCell);
+
+            const dateCell = document.createElement('td');
+            dateCell.textContent = dateArray[i];
+            row.appendChild(dateCell);
 
             const paymentCell = document.createElement('td');
             paymentCell.textContent = paymentArray[i];
